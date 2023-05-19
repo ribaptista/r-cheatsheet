@@ -18,6 +18,12 @@ Inf
 NULL
 ```
 
+### Environment
+```R
+v <- 1
+rm(v)
+```
+
 ### Conversion
 ```R
 v <- 1:3
@@ -35,11 +41,14 @@ as.logical(v)
 
 ### Inspect
 ```R
+# also works with other object types (data frames etc)
 v <- 1:3
 class(v)
 typeof(v)
 str(v)
 print(v)
+View(v)
+head(v, n = 1)
 ```
 
 ### Vectors
@@ -124,4 +133,23 @@ write_xlsx(df, "df.xlsx")
 
 # csv
 write.csv(df, file = "df.csv", row.names = F)
+```
+
+### Inspecting datasets
+```R
+df <- data.frame(v1 = 1:3,
+  v2 = c("a", "b", "c"),
+  v3 = c(T, T, F))
+
+# Variable names
+names(df)
+
+# Dimensions
+nrow(df)
+ncol(df)
+dim(df)
+
+df$v2
+
+
 ```
