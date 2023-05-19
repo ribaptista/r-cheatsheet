@@ -54,6 +54,9 @@ v <- c("a", "b", "c")
 # Logical
 v <- c(T, F)
 
+# Combining
+v <- c(1:3, "a", c(T, F))
+
 # Coercion to numeric
 v <- c(T, F, 0)
 
@@ -70,3 +73,25 @@ v > 2
 v <- c("a", "b", "c")
 v != "b"
 ```
+
+### Factors
+```R
+f <- factor(c("l", "m", "h", "h", "m", "m"), 
+  levels=c("l", "m", "h"),
+  labels=c("Low", "Medium", "High"))
+```
+
+### Data frames
+```R
+df <- data.frame(var1 = c(1, 2, 3),
+  var2 = c("a", "b", "c"),
+  var3 = factor(c("a", "b", "a")))
+
+# Using variables
+var1 <- c(1, 2, 3)
+var2 <- c("a", "b", "c")
+var3 <- factor(c("a", "b", "a"))
+df <- data.frame(var1, var2, var3)
+df2 <- data.frame(v1 = var1, v2 = var2, v3 = var3)
+```
+
