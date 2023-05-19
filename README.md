@@ -95,7 +95,7 @@ df <- data.frame(var1, var2, var3)
 df2 <- data.frame(v1 = var1, v2 = var2, v3 = var3)
 ```
 
-### Datasets
+### Loading datasets
 ```R
 # R format
 ds_name = load("ds.RData", verbose = T)
@@ -111,9 +111,17 @@ df <- read.csv("ds.csv", sep = ",", dec = ".")
 df <- read.csv("https://...", sep = ",", dec = ".")
 ```
 
-### Saving
+### Saving datasets
 ```R
 # R Format
 df <- data.frame(v1 = 1:3)
 save(df, file = "df.RData")
+
+# xslx
+install.packages("writexl")
+library("writexl")
+write_xlsx(df, "df.xlsx")
+
+# csv
+write.csv(df, file = "df.csv", row.names = F)
 ```
