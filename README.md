@@ -95,3 +95,15 @@ df <- data.frame(var1, var2, var3)
 df2 <- data.frame(v1 = var1, v2 = var2, v3 = var3)
 ```
 
+### Datasets
+```R
+# R format
+ds_name = load("ds.RData", verbose = T)
+
+# xslx
+library(readxl)
+df <- read_excel("ds.xlsx")
+
+# csv
+df <- read.csv("ds.csv", sep = ",", dec = ".")
+```
