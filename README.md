@@ -77,8 +77,8 @@ v != "b"
 ### Factors
 ```R
 f <- factor(c("l", "m", "h", "h", "m", "m"), 
-  levels=c("l", "m", "h"),
-  labels=c("Low", "Medium", "High"))
+  levels = c("l", "m", "h"),
+  labels = c("Low", "Medium", "High"))
 ```
 
 ### Data frames
@@ -106,4 +106,14 @@ df <- read_excel("ds.xlsx")
 
 # csv
 df <- read.csv("ds.csv", sep = ",", dec = ".")
+
+# csv from url
+df <- read.csv("https://...", sep = ",", dec = ".")
+```
+
+### Saving
+```R
+# R Format
+df <- data.frame(v1 = 1:3)
+save(df, file = "df.RData")
 ```
