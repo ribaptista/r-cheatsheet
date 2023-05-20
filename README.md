@@ -229,6 +229,8 @@ while (i < 10) i <- i + 1
 ### Statistics
 ```R
 v <- 1:10
+
+# Ignore NAs
 mean(v, na.rm = T)
 ```
 
