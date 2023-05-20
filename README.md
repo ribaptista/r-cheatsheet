@@ -135,7 +135,7 @@ write_xlsx(df, "df.xlsx")
 write.csv(df, file = "df.csv", row.names = F)
 ```
 
-### Inspecting datasets
+### Manipulating datasets
 ```R
 df <- data.frame(v1 = 1:3,
   v2 = c("a", "b", "c"),
@@ -149,7 +149,26 @@ nrow(df)
 ncol(df)
 dim(df)
 
+# Selecting a single value
+df[2, 2]
+
+# Selecting a row
+df[2,]
+
+# Selecting a column
 df$v2
+df[, 2]
 
+# Rows 1 and 3
+df[c(1, 3),]
 
+# Columns 1 and 3
+df[, c(1, 3)]
+df[, c("v1", "v3")]
+
+# Reordering rows
+df[c(2, 3, 1),]
+
+# Reordering columns
+df[, c(2, 3, 1)]
 ```
