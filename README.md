@@ -139,7 +139,8 @@ write.csv(df, file = "df.csv", row.names = F)
 ```R
 df <- data.frame(v1 = 1:3,
   v2 = c("a", "b", "c"),
-  v3 = c(T, T, F))
+  v3 = c(T, T, F),
+  v4 = c("1", "E", "2")
 
 # Variable names
 names(df)
@@ -171,4 +172,26 @@ df[c(2, 3, 1),]
 
 # Reordering columns
 df[, c(2, 3, 1)]
+
+# Removing columns
+df[, -c(1)]
+
+# Removing rows
+df[-c(1),]
+
+# Filtering rows
+df[df$v1 > 2,]
+df[df$v1 > 2 | df$v2 == "b",]
+
+# Renaming variables
+names(df) <- c("var1", "var2", "var3", "var4")
+
+# Converting to numeric
+df$v4_num <- as.numeric(df$var4)
+# Warning message:
+# NAs introduced by coercion 
+
+# Descriptive stats
+summary(df$v4_num)
 ```
+
