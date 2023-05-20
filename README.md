@@ -140,7 +140,7 @@ write.csv(df, file = "df.csv", row.names = F)
 df <- data.frame(v1 = 1:3,
   v2 = c("a", "b", "c"),
   v3 = c(T, T, F),
-  v4 = c("1", "E", "2")
+  v4 = c("1", "E", "2"))
 
 # Variable names
 names(df)
