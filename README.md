@@ -231,3 +231,18 @@ while (i < 10) i <- i + 1
 v <- 1:10
 mean(v, na.rm = T)
 ```
+
+### Manipulating vectors
+```R
+# Append elements to vector
+v <- 1:3
+v[4] <- 4
+v <- c(v, 5, 6)
+```
+
+### Manipulating lists
+```R
+# Append elements to list
+l <- list(1,2,3)
+l[[4]] <- 4
+```
