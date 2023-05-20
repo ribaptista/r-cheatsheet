@@ -195,3 +195,39 @@ df$v4_num <- as.numeric(df$var4)
 summary(df$v4_num)
 ```
 
+### Functions
+```R
+fn <- function(arg1, arg2) {
+  return(arg1 + arg2)
+}
+
+fn(1, 2)
+
+# Vectorization
+fn(1:3, 4:6)
+```
+
+### Conditionals
+```R
+v <- 1
+if (v < 10) {} 
+else if (v < 20) {}
+else {}
+```
+
+### Loops
+```R
+# For
+v <- 1:10
+for (i in v) print(i)
+
+# While
+i <- 1
+while (i < 10) i <- i + 1
+```
+
+### Statistics
+```R
+v <- 1:10
+mean(v, na.rm = T)
+```
