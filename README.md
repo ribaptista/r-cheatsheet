@@ -191,6 +191,9 @@ df$v4_num <- as.numeric(df$var4)
 # Warning message:
 # NAs introduced by coercion 
 
+# Converting to factor
+df$var2 <- factor(df$var2, levels = c(
+
 # Descriptive stats
 summary(df$v4_num)
 ```
