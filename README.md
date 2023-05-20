@@ -192,7 +192,7 @@ df$v4_num <- as.numeric(df$var4)
 # NAs introduced by coercion 
 
 # Converting to factor
-df$var2 <- factor(df$var2, levels = c(
+df$var2 <- factor(df$var2, levels = c("a", 
 
 # Descriptive stats
 summary(df$v4_num)
