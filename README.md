@@ -16,6 +16,11 @@ NA
 Inf
 -Inf
 NULL
+
+# NAs and NaNs
+is.na(v)
+# NaNs only
+is.nan(v)
 ```
 
 ### Environment
@@ -73,6 +78,13 @@ v <- c(T, F, 0)
 v <- c(T, F, 0, 1, "a")
 
 length(v)
+range(v)
+max(v)
+min(x)
+sum(v)
+prod(v)
+pmax(v, ...)
+pmin(v, ...)
 
 # Applying an operation to every element in vector
 v <- 1:3
@@ -81,6 +93,9 @@ v > 2
 
 v <- c("a", "b", "c")
 v != "b"
+
+# Concatenation
+paste(c("X","Y"), 1:10,
 ```
 
 ### Factors
@@ -236,6 +251,9 @@ v <- 1:10
 
 # Ignore NAs
 mean(v, na.rm = T)
+
+# Sample variance
+var(v)
 ```
 
 ### Manipulating vectors
@@ -251,4 +269,12 @@ v <- c(v, 5, 6)
 # Append elements to list
 l <- list(1,2,3)
 l[[4]] <- 4
+```
+
+### Sequences
+```R
+seq(-5, 5, by=.2)
+seq(length=51, from=-5, by=.2)
+rep(x, times=5)
+rep(x, each=5)
 ```
