@@ -213,6 +213,12 @@ l[1:3]
 # named component
 l$a
 l[["a"]]
+
+# concatenating
+c(l, l)
+
+# extending
+l[6] = 1
 ```
 
 ### Data frames
