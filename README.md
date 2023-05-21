@@ -132,6 +132,7 @@ f <- factor(c("l", "m", "h", "h", "m", "m"),
 
 levels(f) <- c("l", "m", "h")
 
+# sum by factor
 n <- 1:10
 f <- factor(rep(c("a", "b"), each=5))
 tapply(n, f, sum)
