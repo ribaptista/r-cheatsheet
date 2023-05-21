@@ -51,6 +51,7 @@ v <- 1:3
 class(v)
 typeof(v)
 str(v)
+mode(v)
 print(v)
 View(v)
 head(v, n = 1)
@@ -108,6 +109,10 @@ v[1:3]
 v[-(1:3)]
 names(v) = c("a", "b", "c", "d", "e")
 v[c("b", "c")]
+
+# assignment
+x <- 1:10
+x[x>5] <- 1:5
 ```
 
 ### Factors
