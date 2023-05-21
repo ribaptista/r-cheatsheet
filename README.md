@@ -95,7 +95,19 @@ v <- c("a", "b", "c")
 v != "b"
 
 # Concatenation
-paste(c("X","Y"), 1:10,
+paste(c("X","Y"), 1:10)
+```
+
+### Vector indexing
+```R
+v <- c(1, 2, 3, NA, NA)
+s <- !is.na(v)
+v[s]
+v[c(T, T, T, F, F)]
+v[1:3]
+v[-(1:3)]
+names(v) = c("a", "b", "c", "d", "e")
+v[c("b", "c")]
 ```
 
 ### Factors
