@@ -52,6 +52,9 @@ class(v)
 typeof(v)
 str(v)
 mode(v)
+attributes(v)
+attr(v, "names")
+attr(x, "names") <- c()
 print(v)
 View(v)
 head(v, n = 1)
@@ -97,6 +100,9 @@ v != "b"
 
 # Concatenation
 paste(c("X","Y"), 1:10)
+
+# Truncate/extend length
+length(v) <- 3
 ```
 
 ### Vector indexing
@@ -120,6 +126,15 @@ x[x>5] <- 1:5
 f <- factor(c("l", "m", "h", "h", "m", "m"), 
   levels = c("l", "m", "h"),
   labels = c("Low", "Medium", "High"))
+```
+
+### Matrices
+```R
+# From vector
+x <- 1:100
+attr(x, "dim") <- c(10,10)
+# or 
+matrix(x, ncol=10)
 ```
 
 ### Data frames
