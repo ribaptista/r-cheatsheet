@@ -143,7 +143,33 @@ tapply(n, f, sum)
 x <- 1:100
 attr(x, "dim") <- c(10,10)
 # or 
-matrix(x, ncol=10)
+m <- matrix(x, ncol=10)
+
+# transpose
+t(m)
+
+# matrix product
+m %*% t(m)
+
+# diagonal as vector
+diag(m)
+
+# diagonal matrix
+diag(1:3)
+
+# joining vectors horizontally
+cbind(1:3, 1:6)
+
+# joining matrices
+m1 <- matrix(1:20, ncol=2)
+cbind(m1, m1)
+
+# joining matrices vertically
+rbind(m1, m1)
+
+# vectors to row and column matrices
+rbind(1:3)
+cbind(1:3)
 ```
 
 ### Arrays
