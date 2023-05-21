@@ -170,6 +170,9 @@ rbind(m1, m1)
 # vectors to row and column matrices
 rbind(1:3)
 cbind(1:3)
+
+# to vector
+as.vector(m)
 ```
 
 ### Arrays
