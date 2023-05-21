@@ -135,6 +135,11 @@ levels(f) <- c("l", "m", "h")
 n <- 1:10
 f <- factor(rep(c("a", "b"), each=5))
 tapply(n, f, sum)
+
+# 2-way table
+f <- factor(rep(c("a", "b", "c"), 15))
+g <- factor(rep(c("d", "f", "g"), 15))
+table(f, g)
 ```
 
 ### Matrices
