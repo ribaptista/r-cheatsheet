@@ -103,6 +103,9 @@ paste(c("X","Y"), 1:10)
 
 # Truncate/extend length
 length(v) <- 3
+
+# matrix of products of every x*y combination
+outer(x, y, "*")
 ```
 
 ### Vector indexing
@@ -126,6 +129,12 @@ x[x>5] <- 1:5
 f <- factor(c("l", "m", "h", "h", "m", "m"), 
   levels = c("l", "m", "h"),
   labels = c("Low", "Medium", "High"))
+
+levels(f) <- c("l", "m", "h")
+
+n <- 1:10
+f <- factor(rep(c("a", "b"), each=5))
+tapply(n, f, sum)
 ```
 
 ### Matrices
@@ -135,6 +144,25 @@ x <- 1:100
 attr(x, "dim") <- c(10,10)
 # or 
 matrix(x, ncol=10)
+```
+
+### Arrays
+```R
+# 2-d zeroed array
+x <- array(0, dim=c(4,5))
+
+# 3-dimensional array from vector
+x <- 1:27
+dim(x) <- c(3,3,3)
+x[1,2,3]
+x[2,,]
+x[,,2]
+x[5:8]
+
+# outer product
+# all possible products of elements from a and b
+# dim(ab) is dim(a) and dim(b) concatenated
+ab <- a %o% b
 ```
 
 ### Data frames
