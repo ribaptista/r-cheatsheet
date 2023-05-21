@@ -199,6 +199,22 @@ x[5:8]
 ab <- a %o% b
 ```
 
+### Lists
+```R
+l <- list(a = 1, b = 2, 3, 4, 5)
+
+# first component
+l[[1]]
+
+# sublist
+l[1]
+l[1:3]
+
+# named component
+l$a
+l[["a"]]
+```
+
 ### Data frames
 ```R
 df <- data.frame(var1 = c(1, 2, 3),
