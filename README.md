@@ -388,6 +388,9 @@ var(v)
 v <- 1:3
 v[4] <- 4
 v <- c(v, 5, 6)
+
+# Classify by range
+cut(1:100, breaks = seq(0, 100, by=10))
 ```
 
 ### Manipulating lists
