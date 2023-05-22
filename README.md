@@ -228,6 +228,9 @@ df <- data.frame(var1 = c(1, 2, 3),
   var2 = c("a", "b", "c"),
   var3 = factor(c("a", "b", "a")))
 
+# From lists
+df <- data.frame(x = 1:3, list(y = 4:6, z = 7:9))
+
 # Using variables
 var1 <- c(1, 2, 3)
 var2 <- c("a", "b", "c")
