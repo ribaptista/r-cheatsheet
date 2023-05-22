@@ -244,6 +244,9 @@ df2 <- data.frame(v1 = var1, v2 = var2, v3 = var3)
 # R format
 ds_name = load("ds.RData", verbose = T)
 
+# Table
+df <- read.table("houses.data")
+
 # xslx
 library(readxl)
 df <- read_excel("ds.xlsx")
@@ -253,6 +256,9 @@ df <- read.csv("ds.csv", sep = ",", dec = ".")
 
 # csv from url
 df <- read.csv("https://...", sep = ",", dec = ".")
+
+# scan?
+scan(...)
 ```
 
 ### Saving datasets
@@ -408,3 +414,8 @@ ls(2)
 x
 detach(df)
 ```
+
+### Datasets
+```R
+data()
+```  
