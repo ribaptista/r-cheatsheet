@@ -395,3 +395,13 @@ seq(length=51, from=-5, by=.2)
 rep(x, times=5)
 rep(x, each=5)
 ```
+
+### Workspace
+```R
+df <- data.frame(x = 1:3)
+attach(df)
+search()
+ls(2)
+x
+detach(df)
+```
